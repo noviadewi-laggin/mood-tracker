@@ -41,7 +41,8 @@ button {
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
-  background: white;
+  background: #111;
+  color: white;
 }
 
 button:hover {
