@@ -3,16 +3,19 @@ let moods = JSON.parse(localStorage.getItem("moods")) || []
 function saveMood(mood) {
 
   if (mood === "Good") {
-    document.body.style.background = "#b8ffb8"
-  }
+  document.body.style.background = "#b8ffb8"
+  document.body.style.color = "#111"
+}
 
   if (mood === "Okay") {
-    document.body.style.background = "#fff3b8"
-  }
+  document.body.style.background = "#fff3b8"
+  document.body.style.color = "#111"
+}
 
   if (mood === "Bad") {
-    document.body.style.background = "#ffb8b8"
-  }
+  document.body.style.background = "#ffb8b8"
+  document.body.style.color = "#111"
+}
 
   let currentTime = new Date().toLocaleString()
 
