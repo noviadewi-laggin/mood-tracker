@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>How Are You Feeling Today?</h1>
+
+  <div class="buttons">
+    <button onclick="saveMood('Bad')">😭 Bad</button>
+    <button onclick="saveMood('Okay')">😐 Okay</button>
+    <button onclick="saveMood('Good')">😎 Good</button>
+  </div>
+
+  <h2>Mood History</h2>
+
+  <ul id="moodList"></ul>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

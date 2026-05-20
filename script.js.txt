@@ -1,0 +1,21 @@
+let moods = []
+
+function saveMood(mood) {
+
+  moods.push(mood)
+
+  displayMoods()
+}
+
+function displayMoods() {
+
+  let moodList = document.getElementById("moodList")
+
+  moodList.innerHTML = ""
+
+  for (let i = 0; i < moods.length; i++) {
+
+    moodList.innerHTML += `<li>${moods[i]}</li>`
+
+  }
+}
