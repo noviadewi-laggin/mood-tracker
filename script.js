@@ -1,9 +1,9 @@
-let moods = []
+let moods = JSON.parse(localStorage.getItem("moods")) || []
 
 function saveMood(mood) {
 
   moods.push(mood)
-
+localStorage.setItem("moods", JSON.stringify(moods))
   displayMoods()
 }
 
@@ -19,3 +19,4 @@ function displayMoods() {
 
   }
 }
+displayMoods()
