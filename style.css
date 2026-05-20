@@ -1,8 +1,8 @@
 body {
-  font-family: Arial;
   text-align: center;
   background: #f2f2f2;
   padding: 50px;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -10,7 +10,6 @@ h1 {
 }
 
 button {
-  button {
   padding: 15px 25px;
   margin: 10px;
   border: none;
@@ -19,13 +18,10 @@ button {
   cursor: pointer;
   background: white;
   transition: 0.3s;
-    button:hover {
-  transform: scale(1.1);
-}
 }
 
 button:hover {
-  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 ul {
@@ -34,10 +30,10 @@ ul {
 }
 
 li {
-  background: black;
-color: white;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
   margin: 10px auto;
-  padding: 10px;
-  width: 200px;
-  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  border-radius: 20px;
 }
