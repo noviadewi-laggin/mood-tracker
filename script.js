@@ -2,8 +2,24 @@ let moods = JSON.parse(localStorage.getItem("moods")) || []
 
 function saveMood(mood) {
 
-  moods.push(mood)
-localStorage.setItem("moods", JSON.stringify(moods))
+  if (mood === "Good") {
+    document.body.style.background = "#b8ffb8"
+  }
+
+  if (mood === "Okay") {
+    document.body.style.background = "#fff3b8"
+  }
+
+  if (mood === "Bad") {
+    document.body.style.background = "#ffb8b8"
+  }
+
+  let currentTime = new Date().toLocaleString()
+
+  moods.push(`${mood} - ${currentTime}`)
+
+  localStorage.setItem("moods", JSON.stringify(moods))
+
   displayMoods()
 }
 
@@ -15,8 +31,22 @@ function displayMoods() {
 
   for (let i = 0; i < moods.length; i++) {
 
-    moodList.innerHTML += `<li>${moods[i]}</li>`
-
+    moodList.innerHTML += `
+      <li>
+        ${moods[i]}
+        <button onclick="deleteMood(${i})">❌</button>
+      </li>
+    `
   }
 }
+
+function deleteMood(index) {
+
+  moods.splice(index, 1)
+
+  localStorage.setItem("moods", JSON.stringify(moods))
+
+  displayMoods()
+}
+
 displayMoods()
